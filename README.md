@@ -3,98 +3,98 @@
 
 Usage
 =================================================================
-	1.install Node.js
+	1.install Node.js -> https://nodejs.org/ko/
 	
-	2.move KBLTalk folder
+	2.download and move /KBLTalk/bin/ folder
 	
-	3.excute /KBLTalk/bin/www -> node www
+	3.excute -> node www
 
 API
 =================================================================
 	로그인
 -----------------------------------------------------------------
-request
+	request
 
-type: post
+	type: post
 
-URI : /login
+	URI : /login
 
-prameter: 
-id: 홍길동
-pw: 1234
-*hardcoded data lhw/1234, bks/1234, kwy/1234
+	prameter: 
+	id: 홍길동
+	pw: 1234
+	*hardcoded data lhw/1234, bks/1234, kwy/1234
 
-response
-{
-    "result": {
-        "resultCode": "001",
-        "resultMsg": "success"
-    }
-}
+	response
+	{
+	    "result": {
+		"resultCode": "001",
+		"resultMsg": "success"
+	    }
+	}
 
 
 	친구추가(서버메모리에 저장되며 서버 재시작 시 데이터X)
 -----------------------------------------------------------------
-request
+	request
 
-type: post
+	type: post
 
-URI : /addFriend
+	URI : /addFriend
 
-prameter: 
-id: 홍길동
-pw: 1234
-profilePath: 사진경로 or 기타 필요 텍스트(사진업로드X)
+	prameter: 
+	id: 홍길동
+	pw: 1234
+	profilePath: 사진경로 or 기타 필요 텍스트(사진업로드X)
 
-response
-{
-    "result": {
-        "resultCode": "001",
-        "resultMsg": "success"
-    }
-}
-
-	친구조회
------------------------------------------------------------------
-request
-
-type: post
-
-URI : /getFriends
-
-prameter: 
-	- none
-	
-response
-	list empty -> 
+	response
 	{
 	    "result": {
-	        "resultCode": "002",
-	        "resultMsg": "emptyList"
+		"resultCode": "001",
+		"resultMsg": "success"
 	    }
 	}
 
-	list not empty  ->
-	{
-	    "result": {
-	        "resultCode": "001",
-	        "resultMsg": "success"
-	    },
-	    "data": [
-	        {
-	            "id": "test",
-	            "pw": "fsdfs",
-	            "profilePath": "12345"
-	        },
-	        {
-	            "id": "test1",
-	            "pw": "fsdfs",
-	            "profilePath": "12345432"
-	        },
-	        {
-	            "id": "test3",
-	            "pw": "fsdfs",
-	            "profilePath": "12345432"
-	        }
-	    ]
-}
+	친구조회
+-----------------------------------------------------------------
+	request
+
+	type: post
+
+	URI : /getFriends
+
+	prameter: 
+		- none
+
+	response
+		list empty -> 
+		{
+		    "result": {
+			"resultCode": "002",
+			"resultMsg": "emptyList"
+		    }
+		}
+
+		list not empty  ->
+		{
+		    "result": {
+			"resultCode": "001",
+			"resultMsg": "success"
+		    },
+		    "data": [
+			{
+			    "id": "test",
+			    "pw": "fsdfs",
+			    "profilePath": "12345"
+			},
+			{
+			    "id": "test1",
+			    "pw": "fsdfs",
+			    "profilePath": "12345432"
+			},
+			{
+			    "id": "test3",
+			    "pw": "fsdfs",
+			    "profilePath": "12345432"
+			}
+		    ]
+	}
