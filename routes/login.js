@@ -11,22 +11,26 @@ router.post('/', function(req, res, next) {
 
     if(id == undefined || id == '') {
         var result = new CommonRes("003","please input id");
-        res.json(result);
+        console.log(result)
+        res.json({"result" : result});
         return
     }
 
     if(pw == undefined || pw == '') {
         var result = new CommonRes("004","please input pw");
-        res.json(result);
+        console.log(result)
+        res.json({"result" : result});
         return
     }
     
     if(userInfos.indexOf(id + "/" + pw) == -1) {
         var result = new CommonRes("002","fail");
-        res.json(result);
+        console.log(result)
+        res.json({"result" : result});
     }else {
         var result = new CommonRes("001","success");
-        res.json(result);
+        console.log(result)
+        res.json({"result" : result});
     }
 });
 
