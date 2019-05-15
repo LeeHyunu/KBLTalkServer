@@ -61,7 +61,9 @@ router.post('/register', function(req, res, next) {
     userInfos.push(id + "/" + pw);
     profilePaths.push(profilePath);
 
-    console.log("register result: " + userInfos + profilePaths);
+    console.log("register result: ");
+    console.log(userInfos);
+    console.log(profilePaths)
     var result = new CommonRes("001","success");
     console.log(result)
     res.json({"result" : result});
