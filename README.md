@@ -18,12 +18,33 @@ API
 
 	type: post
 
-	URI : /login
+	URI : users/login
 
 	prameter: 
 	id: 홍길동
 	pw: 1234
 	*hardcoded data lhw/1234, bks/1234, kwy/1234
+
+	response
+	{
+	    "result": {
+		"resultCode": "001",
+		"resultMsg": "success"
+	    }
+	}
+
+	회원가입
+	-----------------------------------------------------------------
+	request
+
+	type: post
+
+	URI : users/register
+
+	prameter: 
+	id: 홍길동
+	pw: 1234
+	profilePath: 사진경로 or 기타 필요 텍스트(사진업로드X)
 
 	response
 	{
@@ -44,8 +65,7 @@ API
 
 	prameter: 
 	id: 홍길동
-	pw: 1234
-	profilePath: 사진경로 or 기타 필요 텍스트(사진업로드X)
+	profilePath: 사진경로 or 기타 필요 텍스트(사진업로드X) //정상적인 DB 가 서버에 들어가면 필요 없음
 
 	response
 	{
