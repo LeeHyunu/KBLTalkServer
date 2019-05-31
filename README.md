@@ -119,3 +119,26 @@ API
 			}
 		    ]
 	}
+
+	APNS전송
+	-----------------------------------------------------------------
+	request
+
+	type: post
+
+	URI : apns/sendAPNS
+
+	prameter: 
+	senderId : lhw
+    	receiverId : kwy
+    	sendMessage : 전송할메세지
+    	//for demo
+    	receiverRegId : deviceToken(ex: "9703A5BBDB396790F792B69B0126968BCE17BFC18DD3E8B8BDBB634A48299817")
+
+	response
+	{
+	    "result": {
+		"resultCode": "001",
+		"resultMsg": "success"
+	    }
+	}
